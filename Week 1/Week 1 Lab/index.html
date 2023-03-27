@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Lab | Bio Page</title>
+    <style>
+        .hide {
+            display:none;
+        }
+
+        h2 {
+            font-size:24px;
+        }
+
+        body {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>Header</h1>
+    <hr>
+    <div id="nav">
+        <a href="#">Bio</a>
+        <a href="#">Education</a>
+        <a href="#">Hobbies</a>
+    </div>
+    <div id="main">
+        <div id="bio" class="content">
+            <h2>Bio</h2>
+            <img src="" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam nemo eos praesentium et. Dignissimos deserunt provident iste est enim sint eum omnis minus fugit autem accusamus, nesciunt, corporis libero placeat!</p>
+            <hr>
+        </div>
+        <div id="education" class="content">
+            <h2>Schooling</h2>
+            <ul>
+                <li><a href="https://www.cloud.edu/" target="_blank"></a>Cloud County Community College</li>
+                <li>Kansas State University</li>
+                <li>New England Institute of Technology</li>
+            </ul>
+            <hr>
+        </div>
+        <div id="hobbies" class="content">
+            <h2>Hobbies</h2>
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+            <img src="" alt="">
+            <hr>
+        </div>
+    </div>
+    <div id="footer">
+        <p>@2023 Tristan Knott | W1 Assignment</p>
+    </div>
+    <script>
+        var a = document.querySelectorAll(`#nav a`);
+
+        for(let i=0; i<a.length;i++) {
+            a[i].addEventListener(`click`, function(e) {
+            e.preventDefault();
+            
+            var div = document.querySelectorAll(`.content`)
+
+            for(let i=0; i<div.length; i++) {
+                div[i].classList.add(`hide`);
+            }
+            
+            div[i].classList.remove(`hide`);
+            })
+        }
+        
+    </script>
+</body>
+</html>
