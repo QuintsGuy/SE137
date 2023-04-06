@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color:white
+}
+
+a:link, a:visited, a:active{
+    text-decoration: none;
+}
+
+a:hover{
+    color:red
+}
+
+body p, li, a, img {
+    color: grey
+}

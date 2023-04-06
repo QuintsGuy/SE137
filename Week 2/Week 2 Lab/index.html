@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Week 2 Lab | Bio Page</title>
+    
+</head>
+<body>
+    <h1><i>Tristan Knott</i></h1>
+    <div id="nav">
+        <a href="#">Bio</a>
+        <a href="#">Education</a>
+        <a href="#">Hobbies</a>
+    </div>
+    <div id="main">
+        <div id="bio" class="content">
+            <h2><strong>Bio</strong></h2>
+            <img src="images/Rockclimbing.jpg" alt="rock gym climbing">
+            <p><em>6-year veteran in the Air National Guard looking to broaden my horizons as a software developer and bring creativity back into my life. I enjoy outdoor activities such as biking, rock climbing, and chilling on the beach with various interests spanning from global geopolitics to woodworking. My aim in life is to obtain a remote job in programming and explore the country in my van! My favorite color is orange and favorite foods gotta be anything drenched in gorgonzola cheese sause.</em></p>
+        </div>
+        <div id="education" class="content hide">
+            <h2>Schooling</h2>
+            <ul>
+                <li><a href="https://www.cloud.edu/" target="_blank">Cloud County Community College</a></li>
+                <li><b>Kansas State University</b></li>
+                <li>New England Institute of Technology</li>
+            </ul>
+        </div>
+        <div id="hobbies" class="content hide">
+            <h2>Hobbies</h2>
+            <ol>
+                <li>Rock Climbing</li>
+                <li>Longboarding</li>
+                <li>Disc Golf</li>
+            </ol>
+            <img src="images/Scorch discraft.png" alt="Scorch Discraft Disc">
+        </div>
+    </div>
+    <div id="footer">
+        <p>@2023 Tristan Knott | W1 Assignment</p>
+    </div>
+    <script>
+        var a = document.querySelectorAll(`#nav a`);
+
+        for(let i=0; i<a.length;i++) {
+            a[i].addEventListener(`click`, function(e) {
+            e.preventDefault();
+            
+            var div = document.querySelectorAll(`.content`)
+
+            for(let i=0; i<div.length; i++) {
+                div[i].classList.add(`hide`);
+            }
+            
+            div[i].classList.remove(`hide`);
+            })
+        }
+        
+    </script>
+</body>
+</html>
