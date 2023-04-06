@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body{
+    background-color: #666;
+    background-image: url(images/Jihn\ screenart.jpg);
+    background-repeat: no-repeat;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited, a:active{
+    color:black;
+}
+
+a:hover{
+    color:peachpuff
+}
+
+div{
+    background: #333333;
+    border:5px solid red;
+    border-top-left-radius: 50px;
+    box-shadow: 0 10px 25px black;
+}
