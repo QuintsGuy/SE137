@@ -5,8 +5,45 @@
 }
 
 body {
-    background-color: black;
-    color:white
+    background-color: rgb(2, 190, 247);
+    text-align: center;
+    color:rgb(2, 190, 247);
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 650px;
+}
+
+#container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+#bio {
+    display: flex;
+}
+
+.content {
+    padding: 15px;
+}
+
+.content h2 {
+    margin-bottom: 7px;
+}
+
+.content p {
+    text-align: justify;
+    margin-left: 10px;
+}
+
+img {
+    width: 250px;
+    height: auto;
 }
 
 a:link, a:visited, a:active{
@@ -18,5 +55,5 @@ a:hover{
 }
 
 body p, li, a, img {
-    color: grey
+    color: black
 }
