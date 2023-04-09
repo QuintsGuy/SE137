@@ -5,55 +5,110 @@
 }
 
 body {
-    background-color: rgb(2, 190, 247);
+    background-image: linear-gradient(to bottom right, rgb(2, 190, 247), purple);
     text-align: center;
     color:rgb(2, 190, 247);
     margin: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    width: 650px;
+    margin-top: 50px;
+    margin-bottom: 49px;
+    width: 750px;
+    font-family: Prompt, arial, serif;
 }
 
-#container {
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 5%;
+body p, li, a, img {
+    color: black
 }
 
 h1 {
     font-size: 54px;
 }
 
-#bio {
-    display: flex;
+
+a {
+    font-size: 18px;
 }
 
-.content {
-    padding: 15px;
-}
-
-.content h2 {
-    margin-bottom: 7px;
-}
-
-.content p {
-    text-align: justify;
-    margin-left: 10px;
-}
-
-img {
-    width: 250px;
-    height: auto;
-}
-
-a:link, a:visited, a:active{
+a:link, a:visited, a:active {
     text-decoration: none;
 }
 
 a:hover{
-    color:red
+    color:rgb(2, 190, 247);
 }
 
-body p, li, a, img {
-    color: black
+#container {
+    background-color: #ffffff;
+    border-radius: 35px;
+    padding: 5%;
+    padding-top: 1%;
+    padding-bottom: 3%;
 }
+
+#nav {
+    margin-bottom: 10px;
+}
+
+#bio {
+    background-color: #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 6px;
+}
+
+#bio_box {
+    display: flex;
+}
+
+#bio img {
+    width: 300px;
+    border-radius: 30% 10%;
+    box-shadow: 2px 3px 10px rgb(2, 190, 247);
+    margin: auto;
+    display: block;
+}
+
+#bio p {
+    text-align: justify;
+    font-size: 16px;
+    padding-right: 20px;
+    margin: auto;
+    display: block;
+}
+
+#below_container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#below_container img {
+    width: 337.5px;
+    height: 337.5px;
+    flex-basis: 50%;
+    margin: auto;
+    display: block;
+}
+
+#lists {
+    flex-basis: 50%;
+    margin: auto;
+    display: block;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+#hobbies {
+    margin-top: 20px;
+}
+
+.content h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.content li {
+    text-align: left;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
