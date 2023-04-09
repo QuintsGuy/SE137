@@ -56,18 +56,21 @@
         </div>
         <script>
             var a = document.querySelectorAll(`#nav a`);
+            
+            for(let i=0; i<a.length; i++)
+            {
+                a[i].addEventListener(`click`, function(e){
+                    e.preventDefault();
     
-            for(let i=0; i<a.length;i++) {
-                a[i].addEventListener(`click`, function(e) {
-                e.preventDefault();
-                
-                var div = document.querySelectorAll(`.content`)
+                    var div = document.querySelectorAll(`.content`);
     
-                for(let i=0; i<div.length; i++) {
-                    div[i].classList.add(`hide`);
-                }
-                
-                div[i].classList.remove(`hide`);
+                    for(let i=0; i<div.length; i++)
+                    {
+                        div[i].classList.add(`hide`);
+                    }
+    
+                   div[i].classList.remove(`hide`);
+                    
                 })
             }
         </script>
