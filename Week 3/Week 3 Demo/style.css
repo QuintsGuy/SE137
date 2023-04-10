@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+html, body{
+    margin: 0px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+main{
+    display: grid;
+    grid-template-areas:"h h h h h h"
+                        "n n n n n n"
+                        "s s s s s s"
+                        "f f f f f f";
+    box-sizing: border-box;
+    border: 10px solid black;
+    min-height: 100%;
+    background-color: yellow;
+    width: 800px;
+    position: relative;
+    margin:0 auto 0 auto;
+}
+
+@media (orientation:landscape){
+    main{
+        display: grid;
+        grid-template-areas:"h h h h h h"
+                            "n n n n n n"
+                            "s s s s s s"
+                            "f f f f f f";
+        box-sizing: border-box;
+        border: 10px black;
+        min-height: 100%;
+        background-color: yellow;
+    }
+}
+
+header{
+    background-color: aqua;
+    grid-area: h;
+}
+
+nav{
+    background-color: blueviolet;
+    grid-area: n;
+}
+
+section{
+    background-color: orange;
+    grid-area: s;
+}
+
+footer{
+    background-color: green;
+    grid-area: f;
+}
