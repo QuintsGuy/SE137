@@ -2,6 +2,7 @@ main{
     box-sizing: border-box;
     margin: auto;
     width: 900px;
+    align-items: center;
 }
 
 main h1, h2, li{

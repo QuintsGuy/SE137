@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: auto;
+    width: 1820px;
+    height: 1080px;
+    align-items: center;
+    background-color: #070707;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+header i {
+    margin-top: 21px;
+    margin-right: 13px;
+}
+
+h1 {
+    font-family: Teko, sans-serif;
+    line-height: 69px;
+    margin-left: 30px;
+    margin-top: 35px;
+    font-size: 48px;
+    color: #BB0908;
+}
+
+h2 {
+    font-family: 'Rock Salt', sans-serif;
+    font-size: 25px;
+    line-height: 72px;
+    height: 77px;
+    mix-blend-mode: normal;
+    color: #FC0303;
+    border-bottom: 4px solid #BB0908;
+}
+
+section {
+    background-color: #282828;
+    display: flex;
+}
+
+#top img {
+    width: 1440px;
+    height: 388px;
+    object-fit: cover;
+}
+
+#bottom {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#bottom p, a {
+    font-family: Poppins, sans-serif;
+    color: #FFF;
+}
+
+#left-box {
+    display: flex;
+    width: 740px;
+    padding: 0px 20px 0px 20px;
+}
+
+#left-box img {
+    width: 310px;
+    display: flex;
+    border-top: 5px solid #BB0908;
+}
+
+#product {
+    border-top: 5px solid #BB0908;
+    padding: 7px 20px 20px 20px;
+    width: 390px;
+    font-size: 18px;
+    line-height: 27px;
+    background-color: #393939;
+}
+
+#product p {
+    margin-top: 23px;
+}
+
+#DVD-box {
+    display: flex;
+    text-align: center;
+    font-family: Teko, sans-serif;
+    margin-top: 15px;
+}
+
+#DVD-box img {
+    width: 117px;
+    border: none;
+}
+
+#DVD-info {
+    margin-left: 23px;
+}
+
+#DVD-info p {
+    font-size: 55px;
+    margin-top: 60px;
+}
+
+#DVD-info a {
+    color: #22C1CB;
+}
+
+#right-box {
+    width: 700px;
+    background-color: #393939;
+    border-top: 5px solid #BB0908;
+    font-size: 24px;
+    padding: 17px 35px 19px 24px;
+}
+
+#right-box img {
+    width: 641px;
+}
+
+aside {
+    margin-left: 20px;
+    background-color: #393939;
+    font-family: roboto, sans-serif;
+    color: #FFF;
+    font-size: 18px;
+}
+
+aside p {
+    font-size: 18px;
+    padding: 20px 41px 0px 44px;
+}
+
+aside strong {
+    color: #FC0303;
+}
+
+aside img {
+    margin-left: 18px;
+    width: 325px;
+    margin-top: 35px;
+}
+
+.img1 {
+    margin-bottom: 10px;
+    height: 254px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #070707;
+    height: 60px;
+    color: #FFF;
+}
+
+footer p {
+    margin-left: 30px;
+    font-size: 12px;
+    font-family: Teko, sans-serif;
+    padding-top: 20px;
+}
