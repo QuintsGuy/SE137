@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    width: 1366px;
+    height: 768px;
+    background-color: #999;
+    color: #FFFFFF;
+}
+
+main {
+    height: 100vh;
+    background-color: #060606;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(165, 165, 165);
+}
+
+header {
+    display: flex;
+    height: 23px;
+    width: 1366px;
+    justify-content: space-between;
+    background-color: #505050;
+}
+
+header p {
+    height: 23px;
+    margin-top: 0;
+}
+
+#options_bar {
+    margin-left: 44px;
+}
+
+#navlist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navlist li {
+    height: 32px;
+    width: 26px;
+    margin-left: 8px;
+}
+
+#FileExplorer_btn {
+    background: url(images/sprites.png)-309px -42px;
+    background-size: 60vw;
+    margin-bottom: 15px;
+}
+
+#Plugins_btn {
+    background: url(images/sprites.png) -397px 0;
+    background-size: 60vw;
+}
+
+#Delete_btn {
+    background: url(images/sprites.png) -840px 0;
+    background-size: 60vw;
+    margin-top: 500px;
+}
+
+section {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+
+#navlist {
+    width: 45px;
+    background-color: #505050;
+}
+
+aside {
+    background-color: #373737;
+    width: 144px;
+}
+
+#right_pane {
+    width: ;
+}
+
+#right_pane p {
+    background-color: #161616;
+    margin: 0px;
+}
+
+#tabs {
+    display: flex;
+}
+
+#tabs p {
+    background-color: #373737;
+}
+
+#tabs a {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 30px;
+    background-color: #373737;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #0254A0;
+    height: 14px;
+    font-size: 10px;
+}
+
+footer p {
+    margin-left: 16px;
+}
