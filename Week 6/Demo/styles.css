@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #666;
+    display: flex;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    background-color: #999;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: greenyellow;
+}
+
+aside {
+    background-color: #333;
+    width: 200px;
+    transition: width 1s;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+textarea {
+    background-color: black;
+    display: block;
+    width: 100%;
+    color: aliceblue;
+    outline: 0;
+    border: 0;
+}
+
+.close {
+    width: 0px;
+}
+
+#text {
+    width: 100px;
+    float: right;
+}
