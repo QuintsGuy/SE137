@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
 }
@@ -117,8 +121,9 @@ section {
 .navlist-content {
     display: none;
     padding: 0px 4px;
-    min-width: 136px;
+    min-width: 144px;
     background-color: #373737;
+    overflow: hidden;
 }
 
 .navlist-content summary {
