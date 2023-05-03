@@ -1,23 +1,22 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
+html, body {
     height: 100%;
 }
 
 body {
-    margin: 0;
-    min-height: 100%;
-    width: 1366px;
-    height: 768px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 768px;
+    max-width: 1366px;
     background-color: #999;
     color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
 }
 
 main {
-    height: 100vh;
     background-color: #060606;
+    max-height: 100%;
 }
 
 a {
@@ -32,95 +31,197 @@ a:hover {
     color: rgb(165, 165, 165);
 }
 
+button {
+    display: block;
+    background-image: url(images/sprites.png);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #373737;
+}
+
 header {
     display: flex;
     height: 23px;
     width: 1366px;
     justify-content: space-between;
     background-color: #505050;
-}
-
-header p {
-    height: 23px;
-    margin-top: 0;
+    align-items: center;
 }
 
 #options_bar {
     margin-left: 44px;
 }
 
-#navlist ul {
-    list-style-type: none;
-    padding: 0;
+header a {
+    margin-right: 15px;
 }
 
-#navlist li {
-    height: 32px;
-    width: 26px;
-    margin-left: 8px;
+header p {
+    margin-right: 140px;
 }
 
-#FileExplorer_btn {
-    background: url(images/sprites.png)-309px -42px;
-    background-size: 60vw;
-    margin-bottom: 15px;
-}
-
-#Plugins_btn {
-    background: url(images/sprites.png) -397px 0;
-    background-size: 60vw;
-}
-
-#Delete_btn {
-    background: url(images/sprites.png) -840px 0;
-    background-size: 60vw;
-    margin-top: 500px;
+header button {
+    width: 15px;
+    height: 15px;
+    background-size: 450px 350px;
+    background-position: -413px 0px;
+    margin-right: 8px;
+    margin-top: 2px;
 }
 
 section {
     display: flex;
-    align-items: stretch;
-    height: 100vh;
+    max-width: 1366px;
+    max-height: 100%;
+    overflow: hidden;
 }
 
-#navlist {
-    width: 45px;
+.navlist {
+    min-width: 45px;
     background-color: #505050;
 }
 
-aside {
+.navlist ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlist button {
+    width: 28px;
+    height: 32px;
+    margin-top: 5px;
+    margin-left: 7px;
+    background-size: 950px 800px;
+ }
+
+#fileExplorer_btn {
+    background-position: -340px -50px;
+}
+
+#plugins_btn {
+    background-position: -436px 0;
+    margin-top: 15px;
+}
+
+#delete_btn {
+    background-position: -924px 0;
+    margin-top: 605px;
+    margin-bottom: 8px;
+}
+
+.navlist-content {
+    display: none;
+    padding: 0px 4px;
+    min-width: 136px;
     background-color: #373737;
-    width: 144px;
+}
+
+.navlist-content summary {
+    padding: 9px 6px;
+    border-top: 1px solid #7B7575;
+    border-bottom: 1px solid #7B7575;
+    margin-bottom: 12px;
+}
+
+.navlist-content p {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.navlist-content p:hover {
+    color: rgb(165, 165, 165);
+    cursor: pointer;
+}
+
+#right_pane {
+    flex-grow: 2;
+    max-width: 100%;
 }
 
 #right_pane p {
+    margin: auto;
+    margin-right: 80px;
+}
+
+#right_pane nav {
+    display: flex;
+}
+
+.navigation {
+    display: flex;
     background-color: #161616;
-    margin: 0px;
+    height: 23px;
+    width: 100%;
+    padding-left: 5px;
+    align-items: center;
 }
 
-#tabs {
+.navigation u {
+    color: #0058A9;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.tabs {
     display: flex;
-}
-
-#tabs p {
-    background-color: #373737;
-}
-
-#tabs a {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    width: 100px;
-    height: 30px;
+    width: 173px;
+    height: 34px;
     background-color: #373737;
+    margin-right: 3px;
+}
+
+.tabs em {
+    display: block;
+    background-image: url(images/sprites.png);
+    background-color: transparent;
+    background-size: 555px 450px;
+    background-position: -198px -375px;
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.tabs button {
+    height: 15px;
+    width: 15px;
+    background-position: -310px 0;
+    margin-top: 10px;
     margin-right: 10px;
+}
+
+.tabs.active {
+    background-color: #161616;
+    color: #C2C2C2
+}
+
+textarea {
+    box-sizing: border-box;
+    background-color: #060606;
+    color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border: none;
+    outline: none;
 }
 
 footer {
     background-color: #0254A0;
     height: 14px;
     font-size: 10px;
+    border-top: 1px solid #FFFFFF;
 }
 
 footer p {
+    margin: 1px;
     margin-left: 16px;
 }

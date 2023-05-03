@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
     <title>Week 6 Lab | Software Designer</title>
 </head>
@@ -18,37 +22,23 @@
                 <a href="#">Help</a>
             </div>
             <p>Week 6 Assignment</p>
-            <button>Settings Icon</button>
+            <button></button>
         </header>
         <section>
-            <div id="navlist">
+            <div class="navlist">
                 <ul>
-                    <li id="FileExplorer_btn"><a href="#"></a></li>
-                    <li id="Plugins_btn"><a href="#"></a></li>
-                    <li id="Delete_btn"><a href="#"></a></li>
+                    <li><button id="fileExplorer_btn"></button></li>
+                    <li><button id="plugins_btn"></button></li>
+                    <li><button id="delete_btn"></button></li>
                 </ul>
             </div>
-            <aside id="FileExplorer" class="hide">
+            <aside id="fileExplorer" class="navlist-content">
                 <details>
                     <summary>Files</summary>
                     <p>File 1</p>
                     <p>File 2</p>
                     <p>File 3</p>
-                    <p>File 4</p>
-                </details>
-                <details>
-                    <summary>Files</summary>
-                    <p>Stuff 1</p>
-                    <p>Stuff 2</p>
-                </details>
-            </aside>
-            <aside id="Plugins" class="hide">
-                <details>
-                    <summary>Files</summary>
-                    <p>File 1</p>
-                    <p>File 2</p>
-                    <p>File 3</p>
-                    <p>File 4</p>
+                    <p style="margin-bottom:20px">File 4</p>
                 </details>
                 <details>
                     <summary>Other Stuff</summary>
@@ -56,45 +46,89 @@
                     <p>Stuff 2</p>
                 </details>
             </aside>
+            <aside id="plugins" class="navlist-content">
+                <details>
+                    <summary>Files</summary>
+                    <p>File 1</p>
+                    <p>File 2</p>
+                    <p>File 3</p>
+                    <p style="margin-bottom:20px">File 4</p>
+                </details>
+                <details>
+                    <summary>Other Stuff</summary>
+                    <p>Stuff 1</p>
+                    <p>Stuff 2</p>
+                </details>
+            </aside>
+
+            <script>
+
+                const buttons = document.querySelectorAll(`.navlist button`);
+                const navlists = document.querySelectorAll(`.navlist-content`);
+
+                buttons.forEach((button, index) => {
+                    button.addEventListener(`click`, () => {
+                        navlists.forEach((navlist) => navlist.style.display = `none`);
+                        navlists[index].style.display = `block`;
+                    })
+                })
+
+            </script>
+
             <div id="right_pane">
-                <nav id="tabs">
-                    <a href="#">
-                        <img src="" alt="">
-                        <p>Tab 1</p>
-                        <button></button>
-                    </a>
-                    <a href="#">
-                        <img src="" alt="">
-                        <p>Tab 2</p>
-                        <button></button>
-                    </a>
-                    <a href="#">
-                        <img src="" alt="">
-                        <p>Tab 3</p>
-                        <button></button>
-                    </a>
+                <nav id="tabsContainer">
+                    
                 </nav>
-                <p>SE 137 > W6 > Homework > Tab 1</p>
+                <p class="navigation"><u>SE 137</u> > <u>W6</u> > <u>Homework</u> > <u>Tab 1</u></p>
                 <script>
         
-                    var a = document.querySelectorAll(`nav a`);
-                    var p = document.querySelector(`p`);
-            
-                    for(let i=0; i<a.length; i++){
-                        a[i].addEventListener(`click`, e=>{
-                            e.preventDefault();
-                            
-                            for(let i=0; i<a.length; i++){
-                                a[i].style.backgroundColor = `grey`;
-                            }
-            
-                            e.target.style.backgroundColor = `black`;
-            
-                            p.innerHTML = `SE 137 >> W6 >> Homework >> ${e.target.innerHTML}`;
-                        })
+                    const tabs = document.querySelectorAll('.tabs');
+
+                    tabs.forEach(tab => {
+                        tab.addEventListener('click', () => {
+                            tabs.forEach(tab => tab.classList.remove('active'));
+                            tab.classList.add('active');
+                            const tabTitle = tab.querySelector('p').textContent;
+                            const textArea = document.querySelector('textarea');
+                            textArea.value = `${tabTitle} content`;
+                        });
+                    });
+
+                    const files = document.querySelector('.navlist-content');
+
+                    files.addEventListener('click', e => {
+                    if (e.target.tagName === 'P') {
+                        const tabTitle = e.target.textContent;
+                        const tab = `
+                        <div class="tabs">
+                            <em></em>
+                            <p>${tabTitle}</p>
+                            <button></button>
+                        </div>
+                        `;
+                        const rightPane = document.querySelector('#right_pane');
+                        const textArea = `
+                        <textarea>${tabTitle} content</textarea>
+                        `;
+                        rightPane.querySelector('nav').insertAdjacentHTML('beforeend', tab);
+                        rightPane.querySelector('.navigation').textContent = `SE 137 > W6 > Homework > ${tabTitle}`;
+                        rightPane.querySelector('textarea').remove();
+                        rightPane.insertAdjacentHTML('beforeend', textArea);
+                        const tabs = document.querySelectorAll('.tabs');
+                        tabs.forEach(tab => {
+                        tab.addEventListener('click', () => {
+                            tabs.forEach(tab => tab.classList.remove('active'));
+                            tab.classList.add('active');
+                            const tabTitle = tab.querySelector('p').textContent;
+                            const textArea = document.querySelector('textarea');
+                            textArea.value = `${tabTitle} content`;
+                        });
+                        });
                     }
-            
+                    });
+
                 </script>
+            
                 <textarea></textarea>
             </div>
         </section>
@@ -103,14 +137,5 @@
             <img src="" alt="">
         </footer>
     </main>
-    <script>
-        var a = document.querySelector(`#tools_btn`);
-        var aside = document.querySelector(`#tools_aside`)
-
-        a.addEventListener(`click`, e=>{
-            e.preventDefault();
-            aside.classList.toggle(`close`)
-        });
-    </script>
 </body>
 </html>
