@@ -35,29 +35,63 @@
             <aside id="fileExplorer" class="navlist-content">
                 <details>
                     <summary>Files</summary>
-                    <p>File 1</p>
-                    <p>File 2</p>
-                    <p>File 3</p>
-                    <p style="margin-bottom:20px">File 4</p>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>File 1</p>
+                    </div>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>File 2</p>
+                    </div>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>File 3</p>
+                    </div>
+                    <div class="file" style="margin-bottom:20px">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>File 4</p>
+                    </div>
                 </details>
                 <details>
                     <summary>Other Stuff</summary>
-                    <p>Stuff 1</p>
-                    <p>Stuff 2</p>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>Stuff 1</p>
+                    </div>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>Stuff 2</p>
                 </details>
             </aside>
             <aside id="plugins" class="navlist-content">
                 <details>
                     <summary>Files</summary>
-                    <p>File 1</p>
-                    <p>File 2</p>
-                    <p>File 3</p>
-                    <p style="margin-bottom:20px">File 4</p>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>File 1</p>
+                    </div>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>File 2</p>
+                    </div>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>File 3</p>
+                    </div>
+                    <div class="file" style="margin-bottom:20px">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>File 4</p>
+                    </div>
                 </details>
                 <details>
                     <summary>Other Stuff</summary>
-                    <p>Stuff 1</p>
-                    <p>Stuff 2</p>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>Stuff 1</p>
+                    </div>
+                    <div class="file">
+                        <img src="images/sprites.png" alt="letter">
+                        <p>Stuff 2</p>
                 </details>
             </aside>
 
@@ -68,8 +102,7 @@
 
                 buttons.forEach((button, index) => {
                     button.addEventListener(`click`, () => {
-                        navlists.forEach((navlist) => navlist.style.display = `none`);
-                        navlists[index].style.display = `block`;
+                        navlists[index].classList.toggle(`active`);
                     })
                 })
 
@@ -97,34 +130,44 @@
                     const files = document.querySelector('.navlist-content');
 
                     files.addEventListener('click', e => {
-                    if (e.target.tagName === 'P') {
-                        const tabTitle = e.target.textContent;
-                        const tab = `
-                        <div class="tabs">
-                            <em></em>
-                            <p>${tabTitle}</p>
-                            <button></button>
-                        </div>
-                        `;
-                        const rightPane = document.querySelector('#right_pane');
-                        const textArea = `
-                        <textarea>${tabTitle} content</textarea>
-                        `;
-                        rightPane.querySelector('nav').insertAdjacentHTML('beforeend', tab);
-                        rightPane.querySelector('.navigation').textContent = `SE 137 > W6 > Homework > ${tabTitle}`;
-                        rightPane.querySelector('textarea').remove();
-                        rightPane.insertAdjacentHTML('beforeend', textArea);
-                        const tabs = document.querySelectorAll('.tabs');
-                        tabs.forEach(tab => {
-                        tab.addEventListener('click', () => {
-                            tabs.forEach(tab => tab.classList.remove('active'));
-                            tab.classList.add('active');
-                            const tabTitle = tab.querySelector('p').textContent;
-                            const textArea = document.querySelector('textarea');
-                            textArea.value = `${tabTitle} content`;
-                        });
-                        });
-                    }
+                        if (e.target.tagName === 'P') {
+                            const tabTitle = e.target.textContent;
+                            const tab = `
+                            <div class="tabs">
+                                <em></em>
+                                <p>${tabTitle}</p>
+                                <button></button>
+                            </div>`;
+                            const rightPane = document.querySelector('#right_pane');
+                            const textArea = `
+                            <textarea>${tabTitle} content</textarea>
+                            `;
+                            rightPane.querySelector('nav').insertAdjacentHTML('beforeend', tab);
+                            rightPane.querySelector('.navigation').textContent = `SE 137 > W6 > Homework > ${tabTitle}`;
+                            rightPane.querySelector('textarea').remove();
+                            rightPane.insertAdjacentHTML('beforeend', textArea);
+                            const tabs = document.querySelectorAll('.tabs');
+                            tabs.forEach(tab => {
+                                tab.addEventListener('click', () => {
+                                    tabs.forEach(tab => tab.classList.remove('active'));
+                                    tab.classList.add('active');
+                                    const tabTitle = tab.querySelector('p').textContent;
+                                    const textArea = document.querySelector('textarea');
+                                    textArea.value = `${tabTitle} content`;
+                                    rightPane.querySelector('.navigation').textContent = `SE 137 > W6 > Homework > ${tabTitle}`;
+                                });
+                            });
+
+                            const buttons = document.querySelectorAll(`div.tabs button`)
+                            
+                            buttons.forEach(b => {
+                                b.addEventListener(`click`, e =>{
+                                    const tabsContainer = rightPane.querySelector('nav')
+
+                                    tabsContainer.removeChild(b.parentElement)
+                                })
+                            })
+                        }
                     });
 
                 </script>

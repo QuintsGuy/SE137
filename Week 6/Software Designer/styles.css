@@ -119,10 +119,10 @@ section {
 }
 
 .navlist-content {
-    display: none;
-    padding: 0px 4px;
-    min-width: 144px;
+    box-sizing: border-box;
+    width: 0px;
     background-color: #373737;
+    transition: width 1s;
     overflow: hidden;
 }
 
@@ -142,6 +142,24 @@ section {
 .navlist-content p:hover {
     color: rgb(165, 165, 165);
     cursor: pointer;
+}
+
+details {
+    width: 144px;
+    margin: 0 4px;
+}
+
+.file {
+    display: flex;
+}
+
+.file img {
+    width: 10px;
+    height: 10px;
+}
+
+.active {
+    width: 144px;
 }
 
 #right_pane {
