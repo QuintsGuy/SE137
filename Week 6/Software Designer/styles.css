@@ -2,16 +2,12 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    min-height: 768px;
-    max-width: 1366px;
+    width: 100vw;
+    height: 100vh;
     background-color: #999;
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
@@ -20,7 +16,6 @@ body {
 
 main {
     background-color: #060606;
-    max-height: 100%;
 }
 
 a {
@@ -50,7 +45,7 @@ button:hover {
 header {
     display: flex;
     height: 23px;
-    width: 1366px;
+    width: 100vw;
     justify-content: space-between;
     background-color: #505050;
     align-items: center;
@@ -79,9 +74,8 @@ header button {
 
 section {
     display: flex;
-    max-width: 1366px;
-    max-height: 100%;
     overflow: hidden;
+    align-items: stretch;
 }
 
 .navlist {
@@ -114,7 +108,7 @@ section {
 
 #delete_btn {
     background-position: -924px 0;
-    margin-top: 605px;
+    margin-top: 838px;
     margin-bottom: 8px;
 }
 
@@ -231,13 +225,14 @@ textarea {
     background-color: #060606;
     color: #FFFFFF;
     width: 100%;
-    height: auto;
     padding: 15px;
     border: none;
     outline: none;
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
     background-color: #0254A0;
     height: 14px;
     font-size: 10px;
@@ -247,4 +242,11 @@ footer {
 footer p {
     margin: 1px;
     margin-left: 16px;
+}
+
+footer button {
+    background: url(images/sprites.png);
+    background-color: transparent;
+    background-position: -413px 0px;
+    margin-right: 10px;
 }
