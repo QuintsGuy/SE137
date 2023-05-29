@@ -151,3 +151,8 @@ footer p {
     margin: 0;
 }
 
+footer a{
+    color: #d5e9f2;
+    padding: 30px;
+    font-size: 32px;
+}
