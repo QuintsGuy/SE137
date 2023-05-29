@@ -1,0 +1,159 @@
+body{
+    background-color: #2e2e2e;
+    max-width: 2366px;
+    min-width: 990px;
+    max-height: 100vh;
+    margin: auto;
+    font-family: Inter, sans-serif;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.larger-image{
+    width: 100%;
+    height: auto;
+    max-height: 1398px;
+}
+
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+a:hover{
+    color: #042B43;
+}
+
+.navbar{
+    background-color: #2085B7;
+    max-height: 61px;
+}
+
+.nav-item{
+    padding: 0 40px 0 40px;
+}
+
+.nav-link{
+    color: #d5e9f2;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 32px;
+}
+
+#content{
+    padding: 30px 66px 30px 66px;
+}
+
+#content a{
+    font-size: 30px;
+    font-weight: 800;
+    color: #2085B7;
+    padding-left: 60px;
+    padding-bottom: 20px;
+}
+
+#content a:hover{
+    color: #042B43;
+}
+
+#top-content{
+    background-color: #d5e9f2;
+    overflow: hidden;
+}
+
+#featured{
+    padding: 30px;
+    padding-top: 10px;
+}
+
+#top-content h1{
+    border-bottom: 5px solid #2085B7;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 48px;
+}
+
+#top-content h3{
+    font-size: 36px;
+    padding-left: 25px;
+}
+
+#top-content p{
+    font-size: 24px;
+    color: #59727b;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+#top-border{
+    position: relative;
+    width: 55px;
+    height: 500px;
+    left: -28px;
+    top: -20px;
+    background: #2085B7;
+    transform: rotate(7deg);
+}
+
+.cropped{
+    object-fit: cover;
+    object-position: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+#bottom-content{
+    background-color: #d5e9f2;
+    margin-top: 20px;
+    padding: 23px 30px 15px 30px;
+}
+
+#bottom-content a{
+    padding: 0;
+}
+
+#bottom-content h2{
+    font-size: 36px;
+    border-bottom: 5px solid #2085B7;
+    padding-left: 15px;
+}
+
+#biography{
+    font-size: 30px;
+}
+
+#biography p{
+    padding: 0 30px 0 30px;
+    color: #59727b;
+    font-size: 30px;
+}
+
+#repositories a{
+    font-size: 30px;
+    justify-content: end;
+    padding-right: 40px;
+}
+
+footer {
+    background-color: #2085B7;
+    display: flex;
+    align-items: center;
+    height: 61px;
+}
+
+footer p {
+    color: #d5e9f2;
+    font-size: 32px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+@media (max-width: 990px){
+    body{
+        display: none;
+    }
+}
+
