@@ -151,9 +151,3 @@ footer p {
     margin: 0;
 }
 
-@media (max-width: 990px){
-    body{
-        display: none;
-    }
-}
-
