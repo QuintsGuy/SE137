@@ -28,7 +28,8 @@ a:hover{
 
 .navbar{
     background-color: #2085B7;
-    max-height: 61px;
+    max-height: auto;
+    justify-content: center;
 }
 
 .nav-item{
