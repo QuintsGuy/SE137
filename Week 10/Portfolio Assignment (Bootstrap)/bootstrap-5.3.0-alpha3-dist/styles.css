@@ -137,6 +137,10 @@ a:hover{
     padding-right: 40px;
 }
 
+#contact h2{
+    margin-top: 40px;
+}
+
 footer {
     background-color: #2085B7;
     display: flex;
